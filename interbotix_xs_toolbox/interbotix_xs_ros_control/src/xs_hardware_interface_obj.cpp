@@ -61,7 +61,8 @@ void XSHardwareInterface::init()
   urdf::Model model;
   std::string robot_name = nh.getNamespace();
   urdf::JointConstSharedPtr ptr;
-  model.initParam(robot_name + "/robot_description");
+  //model.initParam(robot_name + "/robot_description");
+  model.initParam("/robot_description");
 
   // Initialize Controller
   for (int i = 0; i < num_joints; ++i) {
